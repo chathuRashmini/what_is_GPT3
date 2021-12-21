@@ -2,7 +2,7 @@ import React from 'react'
 
 import './article.css'
 
-function article() {
+function Article() {
     return (
         <div>
             Article
@@ -10,4 +10,4 @@ function article() {
     )
 }
 
-export default article
+export default Article

@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 
 import './navbar.css'
 import logo from '../../assets/logo.svg'
 
-const navbar = () => {
+const Navbar = () => {
+
+    const [toggleMenu, settoggleMenu] = useState(false)
+
     return (
         <div className='gpt3__navbar'>
             <div className='gpt3__navbar-links'>
@@ -33,8 +36,23 @@ const navbar = () => {
                 <p>Sign In</p>
                 <button type='button'>Sign up</button>
             </div>
+            <div className='gpt3__navbar-menu'>
+                { toggleMenu ?
+                    <RiCloseLine
+                        color='#fff'
+                        size={27}
+                        onClick={() => settoggleMenu(false)}
+                    />
+                    : 
+                    <RiMenu3Line
+                        color='#fff'
+                        size={27}
+                        onClick={() => settoggleMenu(true)}
+                    />
+                }
+            </div>
         </div>
     )
 }
 
-export default navbar
+export default Navbar

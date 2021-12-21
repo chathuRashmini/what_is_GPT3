@@ -2,7 +2,7 @@ import React from 'react'
 
 import './brand.css'
 
-const brand = () => {
+const Brand = () => {
     return (
         <div>
             Brand
@@ -10,4 +10,4 @@ const brand = () => {
     )
 }
 
-export default brand
+export default Brand
